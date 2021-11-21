@@ -1,0 +1,113 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding-top: 50px;
+    &__container {
+        display: flex;
+    }
+    &__logo {
+        margin-right: 601px;
+    }
+    &__bar-list {
+        display: flex;
+        flex-flow: row wrap;
+        min-height: 24px;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    &__bar-item {
+        position: relative;
+    }
+    &__bar-item:not(:last-child) {
+        margin-right: 20px;
+    }
+    &__bar-lang {
+        display: flex;
+    }
+    &__bar-item:not(:last-child)::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: calc(100% + 7px);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #E6E6F0;
+    }
+    &__nav {
+        &-list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+        }
+        &-link_icon {
+            display: none;
+        }
+        &-link {
+            font-size: 18px;
+            line-height: 21px;
+            text-align: right;
+            color: $textColor;
+        }
+        &-link:hover {
+            color: $accentColor;
+        }
+        &-link_blue {
+            color: $blueRegular;
+        }
+        &-link_blue:active {
+            color: $blueActive;
+        }
+        &-link.current {
+            color: $accentColor;
+            border-bottom: 1px solid $accentColor;
+        }
+        &-item:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
+
+.link {
+    &-lang {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $textColor;
+    text-transform: uppercase;
+    padding: 5px 6px;
+    }
+    &-lang:hover {
+        display: block;
+        background-color: $accentColor;
+        border-radius: 8px;
+    }
+}
+
+.address__text,
+.contact__number {
+    color: $textColor;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    padding: 2px 0 3px 0;
+}
+
+.contact__number {
+    font-weight: bold;
+}
+
+.contact__number:hover {
+   color: $blueHover;
+}
+
+.contact__number:active {
+    color: $blueActive;
+}
+

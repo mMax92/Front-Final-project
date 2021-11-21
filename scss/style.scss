@@ -1,0 +1,32 @@
+@import "fonts";
+
+@import "variables";
+
+* {
+    box-sizing: border-box;
+}
+
+@import "body";
+
+@import "header";
+
+@import "first-screen";
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.link {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+
