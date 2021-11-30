@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .header {
+        &__logo {
+            margin-right: 150px;
+        }
+        &__bar-list {
+            justify-content: flex-end;
+        }
+    }
+}

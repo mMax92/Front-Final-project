@@ -9,7 +9,7 @@
         display: flex;
     }
     &__logo {
-        margin-right: 601px;
+        margin-right: calc(712px/1320px * 100%);
     }
     &__bar-list {
         display: flex;
@@ -32,7 +32,7 @@
         display: block;
         position: absolute;
         top: 40%;
-        left: calc(100% + 7px);
+        left: calc(100% + 6px);
         width: 6px;
         height: 6px;
         border-radius: 50%;
@@ -48,23 +48,24 @@
             display: none;
         }
         &-link {
-            font-size: 18px;
-            line-height: 21px;
+            font-size: 16px;
+            line-height: 20px;
             text-align: right;
             color: $textColor;
+            margin-bottom: 3px;
         }
         &-link:hover {
-            color: $accentColor;
+            margin-bottom: 3px;
+            border-bottom: 1px solid $textColor;
         }
         &-link_blue {
             color: $blueRegular;
-        }
-        &-link_blue:active {
-            color: $blueActive;
+            margin-bottom: 3px;
+            border-bottom: 1px solid $blueRegular;
         }
         &-link.current {
             color: $accentColor;
-            border-bottom: 1px solid $accentColor;
+            border-bottom: 2px solid $accentColor;
         }
         &-item:not(:last-child) {
             margin-right: 15px;
@@ -76,19 +77,24 @@
     &-lang {
     font-weight: bold;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 15px;
     text-align: center;
     letter-spacing: 1px;
     color: $textColor;
     text-transform: uppercase;
-    padding: 5px 6px;
+    padding: 5px 7px;
     }
     &-lang:hover {
         display: block;
-        background-color: $accentColor;
+        background-color: $langHover;
         border-radius: 8px;
     }
 }
+
+.current-lang {
+        background-color: $accentColor;
+        border-radius: 8px;
+    }
 
 .address__text,
 .contact__number {
@@ -103,11 +109,11 @@
     font-weight: bold;
 }
 
-.contact__number:hover {
-   color: $blueHover;
+.facebook-link:hover path {
+    fill: $accentColor;
 }
 
-.contact__number:active {
-    color: $blueActive;
+.facebook-link path {
+    transition: all linear .1s;
 }
 

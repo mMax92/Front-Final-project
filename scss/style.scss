@@ -13,15 +13,16 @@
 @import "first-screen";
 
 .container {
-    max-width: 1320px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .link {
     display: block;
     width: fit-content;
     text-decoration: none;
+    transition: all linear .1s;
 }
 
 .logo {
@@ -29,4 +30,7 @@
     flex-direction: column;
 }
 
+@import "tablet.scss";
+
+@import "mobile.scss";
 
