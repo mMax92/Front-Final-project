@@ -6,23 +6,33 @@
     z-index: 10;
     padding-top: 50px;
     &__container {
-        display: flex;
+        display: grid;
+        grid-template-areas:
+            "header__logo header__bar-list"
+            "header__logo header__nav";
     }
     &__logo {
-        margin-right: calc(712px/1320px * 100%);
+        grid-area: header__logo;
+        &-menu {
+            font-size: 20px;
+            line-height: 24px;
+            color: $textColor;
+            display: none;
+        }
     }
     &__bar-list {
         display: flex;
         flex-flow: row wrap;
-        min-height: 24px;
+        justify-content: flex-end;
         align-items: center;
         margin-bottom: 16px;
+        grid-area: header__bar-list;
     }
     &__bar-item {
         position: relative;
     }
     &__bar-item:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 18px;
     }
     &__bar-lang {
         display: flex;
@@ -39,10 +49,12 @@
         background-color: #E6E6F0;
     }
     &__nav {
+        grid-area: header__nav;
         &-list {
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-end;
+            align-items: flex-start;
         }
         &-link_icon {
             display: none;
@@ -56,12 +68,12 @@
         }
         &-link:hover {
             margin-bottom: 3px;
-            border-bottom: 1px solid $textColor;
+            border-bottom: 2px solid $textColor;
         }
         &-link_blue {
             color: $blueRegular;
             margin-bottom: 3px;
-            border-bottom: 1px solid $blueRegular;
+            border-bottom: 2px solid $blueRegular;
         }
         &-link.current {
             color: $accentColor;
@@ -100,9 +112,9 @@
 .contact__number {
     color: $textColor;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 20px;
     text-align: right;
-    padding: 2px 0 3px 0;
+    padding: 2.5px 0 2.5px 0;
 }
 
 .contact__number {
@@ -117,3 +129,6 @@
     transition: all linear .1s;
 }
 
+.slash {
+    display: none;
+}

@@ -1,6 +1,7 @@
 .first-screen {
     position: relative;
     background: $gradientSuperSoft;
+    min-height: 100vh;
     &__text {
         max-width: 800px;
         font-weight: bold;
@@ -8,18 +9,18 @@
         line-height: 46px;
         text-align: center;
         color: $textColor;
-        padding-top: 376px;
-        padding-bottom: 377px;
+        padding-top: 477px;
+        padding-bottom: 477px;
         margin: auto;
         position: relative;
         z-index: 3;
     }
     &__logo {
         position: absolute;
-        width: 595px;
-        height: 687px;
-        top: calc(50% - 799px/2 + 0.5px);
-        left: calc(50% - 697px/2 + 0.5px);
+        width: 872.34px;
+        height: 1000px;
+        top: calc(50% - 1000px/2 + 0.5px);
+        left: calc(50% - 872.34px/2 + 0.5px);
         z-index: 2;
     }
 }

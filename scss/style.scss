@@ -15,7 +15,7 @@
 .container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 60px;
 }
 
 .link {
@@ -30,7 +30,11 @@
     flex-direction: column;
 }
 
-@import "tablet.scss";
+@import "desktop sd.scss";
+
+@import "tablet hd.scss";
+
+@import "tablet sd.scss";
 
 @import "mobile.scss";
 

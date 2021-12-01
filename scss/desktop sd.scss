@@ -1,0 +1,14 @@
+@media (max-width: 1440px) {
+    .first-screen {
+        &__text {
+            padding-top: 376px;
+            padding-bottom: 377px;
+        }
+        &__logo {
+            width: 697px;
+            height: 799px;
+            left: calc(50% - 697px/2 + 0.5px);
+            top: calc(50% - 799px/2 + 0.5px);
+        }
+    }
+}

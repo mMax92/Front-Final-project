@@ -1,10 +1,82 @@
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .header {
-        &__logo {
-            margin-right: 150px;
+        padding: 0;
+        &__container {
+            padding: 0;
+            grid-template-columns: 84.33px 20px 223.39px 1fr;
+            grid-template-areas:
+                "header__bar-list header__bar-list header__bar-list header__bar-list"
+                "header__logo slash header__logo-menu header__nav";
         }
         &__bar-list {
-            justify-content: flex-end;
+            justify-content: space-between;
+            margin-bottom: 0;
+            padding: 10px 15px;
+            background: rgba(245, 245, 250, 0.2);
+        }
+        &__bar-item:first-child {
+            margin-right: 0;
+        }
+        &__bar-item:not(:first-child),
+        &__bar-item::after {
+            display: none;
+            visibility: hidden;
+        }
+        &__bar-item:nth-child(3n) {
+            display: block;
+            visibility: visible;
+            margin-right: 0;
+        }
+        &__logo {
+            margin-bottom: 0;
+            padding-left: 15px;
+            padding-top: 15px;
+            &_white {
+            width: 69.33px;
+            height: 32px;
+            }
+            &-menu {
+                display: block;
+                grid-area: header__logo-menu;
+                margin-top: 15px;
+            }
+        }
+        &__nav {
+            &-list {
+            justify-content: flex-start;
+            }
+            &-item:not(:first-child) {
+                display: none;
+            }
+            &-link_icon {
+                display: block;
+            }
+            &-link {
+                margin-bottom: 0;
+            }
+            &-item_pic {
+                order: 0;
+            }
+            &-item:not(:last-child) {
+                margin-top: 12.5px;
+            }
+        }
+    }
+    .slash {
+        display: block;
+        grid-area: slash;
+        margin: 15px 4px;
+    }
+    .first-screen {
+        &__text {
+            padding-top: 231px;
+            padding-bottom: 231px;
+        }
+        &__logo {
+            width: 523.4px;
+            height: 600px;
+            left: calc(50% - 523.4px/2 + 0.2px);
+            top: calc(50% - 600px/2);
         }
     }
 }
