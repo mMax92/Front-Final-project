@@ -68,15 +68,31 @@
         margin: 15px 4px;
     }
     .first-screen {
+        background-size: 523.4px 600px;
         &__text {
             padding-top: 231px;
             padding-bottom: 231px;
         }
-        &__logo {
-            width: 523.4px;
-            height: 600px;
-            left: calc(50% - 523.4px/2 + 0.2px);
-            top: calc(50% - 600px/2);
+    }
+    .second-screen {
+        &__container {
+            padding: 30px;
+        }
+        &__list {
+            padding-bottom: 0;
+        }
+        &__link {
+            font-size: 30px;
+            line-height: 37px;
+            padding-bottom: 30px;
+        }
+        &__card {
+            max-width: 315px;
+            padding-top: 30px;
+            &-title {
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
     }
 }

@@ -1,6 +1,9 @@
 .first-screen {
     position: relative;
-    background: $gradientSuperSoft;
+    background: url(../images/icons/symbol.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 872.34px 1000px;
     min-height: 100vh;
     &__text {
         max-width: 800px;
@@ -14,14 +17,6 @@
         margin: auto;
         position: relative;
         z-index: 3;
-    }
-    &__logo {
-        position: absolute;
-        width: 872.34px;
-        height: 1000px;
-        top: calc(50% - 1000px/2 + 0.5px);
-        left: calc(50% - 872.34px/2 + 0.5px);
-        z-index: 2;
     }
 }
 

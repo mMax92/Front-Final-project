@@ -25,15 +25,37 @@
         }
     }
     .first-screen {
+        background-size: 893.28px 1024px;
         &__text {
             padding-top: 489px;
             padding-bottom: 489px;
         }
-        &__logo {
-            width: 893.28px;
-            height: 1024px;
-            left: calc(50% - 893.28px/2 - 0.36px);
-            top: calc(50% - 1024px/2);
+    }
+    .second-screen {
+        &__container {
+            display: flex;
+            flex-direction: column;
         }
+        &__list {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            border-right: none;
+            border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 60px;
+        }
+        &__item {
+            width: max-content;
+        }
+        &__item:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+        &__card {
+            max-width: 648px;
+            padding-top: 64px;
+            padding-left: 0;
+            padding-bottom: 0px;
+            }
     }
 }

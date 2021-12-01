@@ -12,6 +12,10 @@
 
 @import "first-screen";
 
+.gradient-screen {
+    background: $gradientSuperSoft;
+}
+
 .container {
     max-width: 1600px;
     margin: 0 auto;
@@ -30,11 +34,13 @@
     flex-direction: column;
 }
 
-@import "desktop sd.scss";
+@import "second-screen";
 
-@import "tablet hd.scss";
+@import "desktop sd";
 
-@import "tablet sd.scss";
+@import "tablet hd";
 
-@import "mobile.scss";
+@import "tablet sd";
+
+@import "mobile";
 

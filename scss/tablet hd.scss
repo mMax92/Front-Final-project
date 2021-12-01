@@ -1,14 +1,16 @@
 @media (max-width: 1024px) {
     .first-screen {
+        background-size: 669.96px 768px;
         &__text {
             padding-top: 361px;
             padding-bottom: 361px;
         }
-        &__logo {
-            width: 669.96px;
-            height: 768px;
-            left: calc(50% - 669.96px/2 - 0.02px);
-            top: calc(50% - 768px/2);
+    }
+    .second-screen {
+        &__card {
+        max-width: 465px;
+        padding-top: 9.5px;
+        padding-bottom: 9.5px;
         }
     }
 }

@@ -155,7 +155,10 @@ body {
 
 .first-screen {
   position: relative;
-  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background: url(../images/icons/symbol.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 872.34px 1000px;
   min-height: 100vh;
 }
 .first-screen__text {
@@ -171,14 +174,6 @@ body {
   position: relative;
   z-index: 3;
 }
-.first-screen__logo {
-  position: absolute;
-  width: 872.34px;
-  height: 1000px;
-  top: calc(50% - 500px + 0.5px);
-  left: calc(50% - 436.17px + 0.5px);
-  z-index: 2;
-}
 
 .scroll-down {
   position: absolute;
@@ -193,6 +188,10 @@ body {
 .scroll-down:hover circle,
 .scroll-down:hover path {
   stroke: #F0145A;
+}
+
+.gradient-screen {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
 .container {
@@ -213,28 +212,84 @@ body {
   flex-direction: column;
 }
 
+.second-screen__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+}
+.second-screen__list {
+  padding: 14.5px 60px 14.5px 0;
+  border-right: 4px solid rgba(255, 255, 255, 0.3);
+}
+.second-screen__item {
+  width: 435px;
+  display: flex;
+  justify-content: flex-end;
+}
+.second-screen__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.second-screen__link {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: right;
+  color: #B3B3BA;
+}
+.second-screen__link:hover {
+  color: #F0145A;
+}
+.second-screen__card {
+  max-width: 921px;
+  padding: 73px 0 73px 60px;
+}
+.second-screen__card-title {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  margin-bottom: 30px;
+}
+.second-screen__card-text {
+  color: #FFF;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.current-link {
+  background: linear-gradient(90deg, #EF8080 0%, #F0145A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (max-width: 1440px) {
+  .first-screen {
+    background-size: 697px 799px;
+  }
   .first-screen__text {
     padding-top: 376px;
     padding-bottom: 377px;
   }
-  .first-screen__logo {
-    width: 697px;
-    height: 799px;
-    left: calc(50% - 348.5px + 0.5px);
-    top: calc(50% - 399.5px + 0.5px);
+
+  .second-screen__card {
+    max-width: 641px;
+    padding-top: 43px;
+    padding-bottom: 43px;
   }
 }
 @media (max-width: 1024px) {
+  .first-screen {
+    background-size: 669.96px 768px;
+  }
   .first-screen__text {
     padding-top: 361px;
     padding-bottom: 361px;
   }
-  .first-screen__logo {
-    width: 669.96px;
-    height: 768px;
-    left: calc(50% - 334.98px - 0.02px);
-    top: calc(50% - 384px);
+
+  .second-screen__card {
+    max-width: 465px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
   }
 }
 @media (max-width: 768px) {
@@ -257,15 +312,38 @@ body {
     order: 1;
   }
 
+  .first-screen {
+    background-size: 893.28px 1024px;
+  }
   .first-screen__text {
     padding-top: 489px;
     padding-bottom: 489px;
   }
-  .first-screen__logo {
-    width: 893.28px;
-    height: 1024px;
-    left: calc(50% - 446.64px - 0.36px);
-    top: calc(50% - 512px);
+
+  .second-screen__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .second-screen__list {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border-right: none;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 60px;
+  }
+  .second-screen__item {
+    width: max-content;
+  }
+  .second-screen__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .second-screen__card {
+    max-width: 648px;
+    padding-top: 64px;
+    padding-left: 0;
+    padding-bottom: 0px;
   }
 }
 @media (max-width: 375px) {
@@ -334,15 +412,32 @@ body {
     margin: 15px 4px;
   }
 
+  .first-screen {
+    background-size: 523.4px 600px;
+  }
   .first-screen__text {
     padding-top: 231px;
     padding-bottom: 231px;
   }
-  .first-screen__logo {
-    width: 523.4px;
-    height: 600px;
-    left: calc(50% - 261.7px + 0.2px);
-    top: calc(50% - 300px);
+
+  .second-screen__container {
+    padding: 30px;
+  }
+  .second-screen__list {
+    padding-bottom: 0;
+  }
+  .second-screen__link {
+    font-size: 30px;
+    line-height: 37px;
+    padding-bottom: 30px;
+  }
+  .second-screen__card {
+    max-width: 315px;
+    padding-top: 30px;
+  }
+  .second-screen__card-title {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 

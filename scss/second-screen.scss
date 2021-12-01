@@ -1,0 +1,51 @@
+.second-screen {
+    &__container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: flex;
+    }
+    &__list {
+        padding: 14.5px 60px 14.5px 0;
+        border-right: 4px solid rgba(255, 255, 255, 0.3);
+    }
+    &__item {
+        width: 435px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &__link {
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 46px;
+        text-align: right;
+        color: #B3B3BA;
+        &:hover {
+            color: $accentColor;
+        }
+    }
+    &__card {
+        max-width: 921px;
+        padding: 73px 0 73px 60px;
+        &-title {
+            color: $textColor;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 30px;
+        }
+        &-text {
+            color: $textColor;
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+}
+
+.current-link {
+    background: linear-gradient(90deg, #EF8080 0%, #F0145A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
