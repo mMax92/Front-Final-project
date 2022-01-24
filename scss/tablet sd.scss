@@ -56,6 +56,23 @@
             padding-top: 64px;
             padding-left: 0;
             padding-bottom: 0px;
-            }
+        }
+    }
+    .servicies {
+        &__card-wrap {
+            grid-template-columns: 50%;
+            grid-template-areas: 
+            "servicies__card servicies__card"
+            "servicies__card servicies__card";
+        }
+        &__card:nth-child(2n) {
+            margin-right: 0;
+        }
+        &__card:nth-child(3n) {
+            margin-right: 60px;
+        }
+        &__card:last-child {
+            margin-right: 0;
+        }
     }
 }

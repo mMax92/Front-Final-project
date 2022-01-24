@@ -1,0 +1,50 @@
+.servicies_svg:hover .servicies_svg-arrow {
+    stroke: $accentColor;
+}
+
+.servicies_svg:hover .servicies_svg-text {
+    fill: $accentColor;
+}
+
+.servicies {
+    &__card-wrap {
+        display: grid;
+        grid-template-columns: 33.33%;
+        grid-template-areas: 
+        "servicies__card servicies__card servicies__card"
+        "servicies__card servicies__card servicies__card";
+    }
+    &__title {
+        background: linear-gradient(90deg, #F0145A 0%, #EF8080 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 46px;
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
+    &__card {
+        grid-area: "servicies__card";
+        margin-right: 60px;
+        margin-bottom: 60px;
+    }
+    &__card:nth-child(3n) {
+        margin-right: 0;
+    }
+    &__icon {
+        margin-bottom: 30px;
+    }
+    &__card-title {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        color: $blueRegular;
+        margin-bottom: 15px;
+    }
+    &__card-text {
+        color: $textColor;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
