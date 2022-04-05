@@ -13,4 +13,20 @@
         padding-bottom: 43px;
         }
     }
+    .companies {
+        &__item {
+            &_hillel {
+                border-radius: 0;
+            }
+            &_3dlook {
+                border-radius: 0;
+            }
+            &_infatek {
+                border-radius: 0;
+            }
+            &_ultimate {
+                border-radius: 0;
+            }
+        }
+    }
 }

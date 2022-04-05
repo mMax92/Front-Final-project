@@ -9,7 +9,7 @@
         border-right: 4px solid rgba(255, 255, 255, 0.3);
     }
     &__item {
-        width: 435px;
+        min-width: fit-content;
         display: flex;
         justify-content: flex-end;
     }

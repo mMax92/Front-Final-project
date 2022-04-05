@@ -3,10 +3,10 @@
         padding: 0;
         &__container {
             padding: 0;
-            grid-template-columns: 84.33px 20px 223.39px 1fr;
+            grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
-                "header__bar-list header__bar-list header__bar-list header__bar-list"
-                "header__logo slash header__logo-menu header__nav";
+                "header__bar-list header__bar-list"
+                "header__logo header__nav";
         }
         &__bar-list {
             justify-content: space-between;
@@ -43,13 +43,17 @@
         }
         &__nav {
             &-list {
-            justify-content: flex-start;
+            justify-content: flex-end;
             }
             &-item:not(:first-child) {
                 display: none;
             }
             &-link_icon {
                 display: block;
+            }
+            &-link_icon:hover {
+                background: #E6E6F0;
+                border-radius: 8px;
             }
             &-link {
                 margin-bottom: 0;
@@ -61,11 +65,6 @@
                 margin-top: 12.5px;
             }
         }
-    }
-    .slash {
-        display: block;
-        grid-area: slash;
-        margin: 15px 4px;
     }
     .first-screen {
         background-size: 523.4px 600px;
@@ -106,18 +105,29 @@
         }
         &__card-wrap {
             grid-template-columns: 1fr;
-            grid-template-areas: 
-            "servicies__card"
-            "servicies__card"
-            "servicies__card"
-            "servicies__card"
-            "servicies__card"
-            "servicies__card";
-            
+            grid-row-gap: 30px;
+        }
+    }
+    .team {
+        &__container {
+            padding: 30px;
         }
         &__card {
-            margin-right: 0;
-            margin-bottom: 30px;
+            margin-top: 0;
+            background-size: 500px;
+            background-position: 40% 0;
+            border-radius: 12px 12px 0 0;
+        }
+        &__description {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 500px;
+            background: #F5F5FA;
+            border-radius: 0 0 12px 12px;
+        }
+        &__text {
+            font-size: 30px;
+            line-height: 37px;
         }
     }
 }

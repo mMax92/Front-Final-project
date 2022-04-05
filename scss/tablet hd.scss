@@ -8,9 +8,18 @@
     }
     .second-screen {
         &__card {
-        max-width: 465px;
-        padding-top: 9.5px;
-        padding-bottom: 9.5px;
+            max-width: 465px;
+            padding-top: 9.5px;
+            padding-bottom: 9.5px;
         }
+    }
+    .team {
+        &__card {
+            background-size: 528px;
+            background-position-x: -60px;
+        }
+    }
+    .companies__wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(217px, 1fr));
     }
 }

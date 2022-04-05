@@ -43,9 +43,10 @@
             border-right: none;
             border-bottom: 4px solid rgba(255, 255, 255, 0.3);
             padding-bottom: 60px;
+            overflow: scroll;
         }
         &__item {
-            width: max-content;
+            justify-content: flex-start;
         }
         &__item:not(:last-child) {
             margin-right: 30px;
@@ -60,19 +61,21 @@
     }
     .servicies {
         &__card-wrap {
-            grid-template-columns: 50%;
-            grid-template-areas: 
-            "servicies__card servicies__card"
-            "servicies__card servicies__card";
+            grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
         }
-        &__card:nth-child(2n) {
-            margin-right: 0;
+    }
+    .team {
+        &__card {
+            flex-direction: column;
+            background-size: 648px;
+            background-position: 0 -30%;
+            border-radius: 12px 12px 0 0;
         }
-        &__card:nth-child(3n) {
-            margin-right: 60px;
-        }
-        &__card:last-child {
-            margin-right: 0;
+        &__description {
+            margin-left: 0;
+            margin-top: 500px;
+            background: #F5F5FA;
+            border-radius: 0 0 12px 12px;
         }
     }
 }

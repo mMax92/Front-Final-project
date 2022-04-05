@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
 @import "body";
 
 @import "header";
@@ -16,14 +22,12 @@
 
 @import "team";
 
+@import "companies";
+
+@import "publications";
+
 .gradient-screen {
     background: $gradientSuperSoft;
-}
-
-.container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 60px;
 }
 
 .link {
