@@ -1,0 +1,91 @@
+.footer {
+    background: #F5F5FA;
+    &__container {
+        display: grid;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        grid-template-areas: 
+            "footer-address footer-copyright"
+            "footer-contact footer-copyright";
+    }
+    &__address {
+        grid-area: footer-address;
+        &-list {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 21px;
+        }
+        &-item {
+            position: relative;
+            &:first-child {
+                margin-right: 26px;
+            }
+        }
+        &-text {
+        font-size: 16px;
+        line-height: 20px;
+        color: #323264;
+        }
+        &-location {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $blueRegular;
+            padding-top: 2.5px;
+            &:hover {
+                color: $accentColor;
+            }
+        }
+    }
+    &__contact {
+        grid-area: footer-contact;
+        &-list {
+            display: flex;
+            flex-direction: row;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &-item {
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 26px;
+            }
+            &:not(:first-child) {
+                padding-top: 9px;
+            }
+        }
+        &-number,
+        &-email {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #46466E;
+        }
+        &-email {
+            color: $blueRegular;
+            &:hover {
+                color: $accentColor;
+            }
+        }
+    }
+    &-copyright {
+        color: #B3B3BA;
+        grid-area: footer-copyright;
+        text-align: right;
+    }
+}
+
+.footer__address-item:first-child::after,
+.footer__contact-item:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: calc(100% + 10px);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #B3B3BA;
+}

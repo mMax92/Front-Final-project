@@ -59,7 +59,7 @@
             padding-bottom: 0px;
         }
     }
-    .servicies {
+    .services {
         &__card-wrap {
             grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
         }
@@ -67,15 +67,42 @@
     .team {
         &__card {
             flex-direction: column;
-            background-size: 648px;
-            background-position: 0 -30%;
-            border-radius: 12px 12px 0 0;
+            &::before {
+                width: 100%;
+                height: 500px;
+                background-position-y: 70%;
+                border-radius: 12px 12px 0 0;
+            }
         }
         &__description {
+            width: 100%;
             margin-left: 0;
-            margin-top: 500px;
-            background: #F5F5FA;
             border-radius: 0 0 12px 12px;
+        }
+    }
+    .publications {
+        &__wrap {
+            grid-template-columns: repeat(2,1fr);
+        }
+        &__card:first-child,
+        &__card:nth-child(3n+1) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__card:nth-child(3n-1) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__card:nth-child(3n) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &__card_first::before,
+        &__card_second::before {
+            background-position-x: 40%;
+        }
+        &__card_third::before {
+            background-size: cover;
         }
     }
 }

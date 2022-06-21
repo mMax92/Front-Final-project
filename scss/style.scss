@@ -18,7 +18,7 @@
 
 @import "first-screen";
 
-@import "servicies";
+@import "services";
 
 @import "team";
 
@@ -26,8 +26,37 @@
 
 @import "publications";
 
-.gradient-screen {
+@import "footer";
+
+.gradient__screen {
     background: $gradientSuperSoft;
+    position: relative;
+    border-radius: 0px 0px 12px 12px;
+    margin-bottom: 80px;
+}
+
+.gradient__screen::before {
+    display: block;
+    content: "";
+    width: calc(100% - 40px);
+    height: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: -10px;
+    background: #CACADB;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.gradient__screen::after {
+    display: block;
+    content: "";
+    width: calc(100% - 80px);
+    height: 10px;
+    position: absolute;
+    left: 40px;
+    bottom: -20px;
+    background: #E7E7F2;
+    border-radius: 0px 0px 12px 12px;
 }
 
 .link {

@@ -1,5 +1,7 @@
 .publications {
+    background: #F5F5FA;
     &__link {
+        padding-top: 30px;
         font-weight: bold;
         font-size: 14px;
         line-height: 17px;
@@ -12,5 +14,73 @@
         &:hover  .publications__svg {
             stroke: $accentColor;
         }
-    } 
-}    
+    }
+    &__title {
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 46px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #E6E6F0;
+    }
+    &__card {
+        background: #FFFFFF;
+        border-radius: 0 0 8px 8px;
+        background-repeat: no-repeat;
+        &_first::before,
+        &_second::before,
+        &_third::before {
+            display: block;
+            content: "";
+            height: 200px;
+            border-radius: 8px 8px 0 0;
+        }
+        &_first::before {
+            background-image: url(../images/Cover1.png);
+        }
+        &_second::before {
+            background-image: url(../images/Cover2.png);
+        }
+        &_third::before {
+            background-image: url(../images/Cover3.png);
+        }
+        &-description {
+            margin-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $blueRegular;
+            margin-bottom: 15px;
+        }
+        &-date {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #B3B3BA;
+            margin-bottom: 15px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;
+            border-top: 4px solid #E6E6F0;
+            padding-top: 15px;
+            margin-bottom: 30px;
+        }
+    }
+}

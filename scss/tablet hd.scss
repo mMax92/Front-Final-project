@@ -13,10 +13,12 @@
             padding-bottom: 9.5px;
         }
     }
+    .services__container_entry {
+        padding: 0 60px;
+    }
     .team {
-        &__card {
-            background-size: 528px;
-            background-position-x: -60px;
+        &__card::before {
+        background-position-x: 25%;
         }
     }
     .companies__wrapper {
